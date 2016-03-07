@@ -1,6 +1,6 @@
 {
   "name": "date-stream",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Provides an automated rotational stream based on date.",
   "main": "index.js",
   "scripts": {

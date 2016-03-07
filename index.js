@@ -15,7 +15,7 @@ function DateStream(filename, format, timezone, separator) {
 	stream.Writable.call(this);
 
 	this.filename = filename;
-	this.format = format || 'yyyymmddhhMM';
+	this.format = format || 'yyyymmdd';
 	this.timezone = timezone || 0;
 	this.separator = separator || '-';
 
@@ -52,4 +52,16 @@ DateStream.prototype._getRealPath = function (date) {
 	return dir + '/' + name + this.separator + dateStr + ext;
 };
 
+/**
+ * @param {string} filename
+ * @param {string} [format=yyyymmdd]
+ * @param {number} [timezone=0]
+ * @param {string} [separator=-]
+ * @constructor
+ */
+DateStream.getStream = function (filename, format, timezone, separator) {
+	return new DateStream(filename, format, timezone, separator);
+};
+
 module.exports = DateStream;
+DateStream.DateStream = DateStream;
