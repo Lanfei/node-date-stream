@@ -1,4 +1,4 @@
-# node-date-stream
+# node-date-stream [![NPM version][npm-image]][npm-url]
 Provides an automated rotational stream based on date.
 
 ## Usage
@@ -35,3 +35,6 @@ Default: `8`
 Type: `String`
 
 Default: `-`
+
+[npm-url]: https://npmjs.org/package/date-stream
+[npm-image]: https://badge.fury.io/js/date-stream.svg
